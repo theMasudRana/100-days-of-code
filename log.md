@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-### Day 0: January 01, 2020 (Example 1)
+### Day 1: January 01, 2020
 
 **Today's Progress**: Hamburg Menu Icon
 

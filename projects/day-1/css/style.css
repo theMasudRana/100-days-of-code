@@ -1,0 +1,64 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    overflow: hidden;
+}
+.bar {
+    width: 30px;
+    height: 3px;
+    background: #a6abab;
+    margin-bottom: 4px;
+    position: relative;
+}
+.bar:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    left: 100%;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+.hamburger-menu:hover .bar:after {
+    transform: translateX(100%);
+}
+
+/* Mover bar :after Backward once element is not hovered */
+.hamburger-menu .bar:nth-child(1):after {
+    transition-delay: 0.1s;
+}
+.hamburger-menu .bar:nth-child(2):after {
+    transition-delay: 0.2s;
+}
+.hamburger-menu .bar:nth-child(3):after {
+    transition-delay: 0.3s;
+}
+
+/* Mover bar :after forward once element is hovered */
+.hamburger-menu:hover .bar:nth-child(1):after {
+    transition-delay: 0.1s;
+}
+.hamburger-menu:hover .bar:nth-child(2):after {
+    transition-delay: 0.2s;
+}
+.hamburger-menu:hover .bar:nth-child(3):after {
+    transition-delay: 0.3s;
+}
